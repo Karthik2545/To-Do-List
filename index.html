@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reminder Application</title>
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="index.css" />
+        <!-- Bootstrap CDN -->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+          crossorigin="anonymous"
+        />
+    
+        <!-- Font Awesome -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+    </head>
+    <body onload="load()">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid" style="background-color:grey;margin-top: -7px;">
+              <a class="navbar-brand">Home</a>
+              <form class="d-flex" style="width:50%;margin-left: 30px;" role="search">
+                <input class="form-control me-2" type="search" id="mark" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success" type="submit" onclick="search()" >Search</button>
+              </form>
+              <button class="btn btn-warning" type="submit" data-bs-toggle="modal" data-bs-target="#addNewModal">
+              <i class="fas fa-plus"></i> ADD</button>
+            </div>
+        </nav>
+        <div class="head">
+            <h1 class="heading">TO DO LIST</h1>
+        </div>
+        <!-- Modal for Adding a New Item -->
+        <div class="modal fade" id="addNewModal" tabindex="-1" aria-labelledby="addNewModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addNewModalLabel">Add Reminder</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="taskTitle" class="form-label">Add Task</label>
+                            <input type="text" class="form-control" id="title" placeholder="please enter your title here.." required/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="taskTitle" class="form-label">Time</label>
+                            <input type="text" class="form-control" id="time" placeholder="please enter your time here.." required/>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" onclick="clicksubmit()">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="newcard">
+        </div>
+        <!-- custom JS File -->
+        <script src="index.js"></script>
+        <!-- Bootstrap CDN -->
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    </body>
+</html>

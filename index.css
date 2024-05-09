@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.card-items{
+    display: flex;
+    flex-direction: row;
+    align-items:baseline;
+    gap:15px;
+    margin-top:-1px;
+}
+.newcard{
+    margin-left: 50px;
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-items: baseline !important;
+    gap:25px !important;
+}
+.but{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-items: baseline !important;
+    justify-content: end;
+}
+.butt{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-items: baseline !important;
+    justify-content: end;
+    height: 37px !important;
+}
+.head{
+    height: 50px;
+    width: 220px;
+    background-color: rgb(225, 225, 72);
+    text-align: center;
+    margin-left: 500px;
+}
+.heading{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
